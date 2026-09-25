@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dr. Sreya Mitra — Media &amp; Cultural Studies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --wine:#5C1A28; --wine-2:#7A2436; --cream:#F7F1E6; --sand:#EFE6D2;
+    --ink:#221512; --ink-soft:#6B5C55; --line:#DED0BC; --card:#FFFDF9;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:border-box;}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){ --cream:#1B1210; --ink:#F1E9DF; --ink-soft:#C9B8AC; --card:#241815; --line:#3E2C26; }
+  }
+  :root[data-theme="dark"]{ --cream:#1B1210; --ink:#F1E9DF; --ink-soft:#C9B8AC; --card:#241815; --line:#3E2C26; }
+  html{scroll-padding-top:66px; scroll-behavior:smooth;}
+  body{margin:0; background:var(--cream); color:var(--ink); font-family:'Inter',system-ui,sans-serif; line-height:1.65;}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif; font-weight:600; margin:0 0 .3em; color:var(--ink);}
+  a{color:inherit;}
+  .wrap{max-width:860px; margin:0 auto; padding:0 24px;}
+  nav{position:sticky; top:0; z-index:10; background:var(--wine); color:#F3E4D9; padding:env(safe-area-inset-top,0px) 0 0;}
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; padding-top:12px; padding-bottom:12px; overflow-x:auto; gap:18px;}
+  nav .brand{font-family:'Fraunces',serif; font-size:1.05rem; white-space:nowrap;}
+  nav .links{display:flex; gap:18px; font-size:.84rem; white-space:nowrap;}
+  nav .links a{text-decoration:none; color:#E7C9BA; border-bottom:2px solid transparent; padding-bottom:2px;}
+  nav .links a:hover, nav .links a:focus-visible{color:#fff; border-color:#D9A26B;}
+
+  header.hero{background:linear-gradient(180deg,var(--wine) 0%, var(--wine-2) 100%); color:#F5E7DC; padding:56px 0 64px;}
+  .hero .wrap{display:flex; gap:36px; align-items:center; flex-wrap:wrap;}
+  .hero img{width:150px; height:auto; border-radius:6px; object-fit:cover; border:3px solid #D9A26B; flex-shrink:0;}
+  .hero .txt{flex:1; min-width:260px;}
+  .hero .eyebrow{color:#D9A26B; font-size:.92rem; margin-bottom:6px;}
+  .hero h1{font-size:2.2rem; color:#fff; margin-bottom:6px;}
+  .hero .role{font-size:1.02rem; color:#E3C9BB; margin-bottom:14px;}
+  .hero .contact{font-size:.86rem; color:#CBAB9C; display:flex; flex-wrap:wrap; gap:14px;}
+  .hero .contact a{text-decoration:none; border-bottom:1px solid #8a6154;}
+
+  section{padding:42px 0; border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  section h2{font-size:1.45rem; margin-bottom:16px;}
+  .lede{color:var(--ink-soft); max-width:66ch; font-size:1.01rem;}
+
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:8px;}
+  @media (max-width:640px){.grid2{grid-template-columns:1fr;}}
+
+  .entry{margin-bottom:16px;}
+  .entry .when{color:#A9522F; font-size:.82rem; font-weight:600;}
+  .entry .what{font-weight:600; margin-top:2px;}
+  .entry .where{color:var(--ink-soft); font-size:.92rem;}
+
+  .taglist{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;}
+  .tag{background:var(--card); border:1px solid var(--line); border-radius:3px; padding:6px 12px; font-size:.86rem;}
+
+  .pub{padding:14px 0; border-top:1px solid var(--line);}
+  .pub:first-child{border-top:none;}
+  .pub .yr{color:#A9522F; font-weight:600; font-size:.82rem;}
+  .pub .title{font-weight:600; margin:2px 0;}
+  .pub .venue{color:var(--ink-soft); font-size:.9rem; font-style:italic;}
+
+  .stats{display:flex; gap:32px; flex-wrap:wrap; margin-top:6px;}
+  .stat .num{font-family:'Fraunces',serif; font-size:2rem; color:var(--wine); line-height:1;}
+  :root[data-theme="dark"] .stat .num{color:#E3956B;}
+  @media (prefers-color-scheme:dark){ .stat .num{color:#E3956B;} }
+  .stat .label{color:var(--ink-soft); font-size:.84rem; margin-top:4px;}
+
+  .keynote{background:var(--card); border:1px solid var(--line); border-left:4px solid var(--wine); padding:18px 20px; border-radius:4px; margin-top:8px;}
+
+  footer{padding:34px 0 48px; color:var(--ink-soft); font-size:.86rem;}
+</style>
+<link rel="icon" type="image/png" href="../assets/images/favicon.png">
+<link rel="shortcut icon" href="../favicon.ico">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand" style="display:flex;align-items:center;gap:10px;">
+      <a href="../index.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit;" title="Return to LLCSF 2026 Home">
+        <img src="../assets/images/logo-circle.png" alt="LLCSF Logo" style="width:26px;height:26px;border-radius:50%;object-fit:cover;border:1px solid #D9A26B;">
+        <span style="font-size:0.86rem;color:#F3D8C7;font-weight:600;">← LLCSF 2026</span>
+      </a>
+      <span style="opacity:0.35;">|</span>
+      <span>Sreya Mitra</span>
+    </div>
+    <div class="links">
+      <a href="../index.html#profiles">All Portfolios</a>
+      <a href="#about">About</a>
+      <a href="#career">Career</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="../index.html#organizers" title="Host Institution: St. Francis de Sales College (Autonomous)" style="display:inline-flex;align-items:center;margin-left:12px;">
+      <img src="../assets/images/sfs-college-seal.png" alt="SFS College Seal" style="width:34px;height:34px;border-radius:50%;background:#fff;padding:2px;border:1px solid #D9A26B;box-shadow:0 2px 8px rgba(0,0,0,0.2);">
+    </a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <img src="data:image/jpeg;base64,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" alt="Dr. Sreya Mitra">
+    <div class="txt">
+      <div class="eyebrow">Associate Professor, Media &amp; Cultural Studies</div>
+      <h1>Dr. Sreya Mitra</h1>
+      <div class="role">Department of Media Communication, American University of Sharjah</div>
+      <div class="contact">
+        <a href="mailto:smitra@aus.edu">smitra@aus.edu</a>
+        <span>Sharjah, United Arab Emirates</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p class="lede">Sreya studies how Bollywood travels — across screens, platforms, and borders. Her work examines popular Indian cinema, television and new media in South Asia, tracing questions of stardom, celebrity culture, fandom, gender and globalization as they play out in the culture industries of India and its diasporas.</p>
+    <div class="stats">
+      <div class="stat"><div class="num">84</div><div class="label">citations (Google Scholar)</div></div>
+      <div class="stat"><div class="num">11+</div><div class="label">peer-reviewed publications</div></div>
+      <div class="stat"><div class="num">2</div><div class="label">edited-volume chapters</div></div>
+      <div class="stat"><div class="num">5</div><div class="label">international research associations</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="career">
+  <div class="wrap">
+    <h2>Career</h2>
+    <div class="grid2">
+      <div>
+        <h3 style="font-size:1.02rem;">Positions</h3>
+        <div class="entry"><div class="when">Current</div><div class="what">Associate Professor, Media Communication</div><div class="where">American University of Sharjah, UAE</div></div>
+        <div class="entry"><div class="when">2012 — 2015</div><div class="what">Adjunct Instructor</div><div class="where">American University of Sharjah, UAE</div></div>
+        <div class="entry"><div class="when">2005 — 2012</div><div class="what">Teaching Assistant, Department of Communication Arts</div><div class="where">University of Wisconsin-Madison, USA</div></div>
+      </div>
+      <div>
+        <h3 style="font-size:1.02rem;">Professional memberships</h3>
+        <div class="taglist" style="margin-top:2px;">
+          <div class="tag">IAMCR</div>
+          <div class="tag">Inter-Asia Cultural Studies</div>
+          <div class="tag">American Comparative Literature Association</div>
+          <div class="tag">International Communication Association</div>
+          <div class="tag">Society for Cinema &amp; Media Studies</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <h2>Research focus</h2>
+    <p class="lede">Media studies with a South Asian and transnational lens.</p>
+    <div class="taglist">
+      <div class="tag">Popular Indian cinema &amp; television</div>
+      <div class="tag">Stardom &amp; celebrity culture</div>
+      <div class="tag">Fandom studies</div>
+      <div class="tag">Gender &amp; globalization</div>
+      <div class="tag">South Asian diaspora media</div>
+      <div class="tag">Culture industries</div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <h2>Selected publications</h2>
+    <div class="pub"><div class="yr">2026</div><div class="title">'Desh ka sawaal hai': Shah Rukh Khan, the 'Global Indian' and the Problematics of Minority Citizenship in Contemporary India</div><div class="venue">Journal article</div></div>
+    <div class="pub"><div class="yr">2025</div><div class="title">'You are from the country of @iamsrk. I trust you': Shah Rukh Khan, transnational stardom and counteracting the problematics of the Muslim celebrity in contemporary India</div><div class="venue">Celebrity Studies</div></div>
+    <div class="pub"><div class="yr">2025</div><div class="title">Bollywood and Cultural Contestation: Examination of Digital Mobilization Against the Hindi Film Industry</div><div class="venue">Journal of International and Intercultural Communication — with Prashanth Bhat &amp; Nanditha Narayanamoorthy</div></div>
+    <div class="pub"><div class="yr">2021</div><div class="title">Beyond the Nation and the Diaspora: Examining Bollywood's Transnational Appeal in the United Arab Emirates</div><div class="venue">Middle East Journal of Culture and Communication</div></div>
+    <div class="pub"><div class="yr">2020</div><div class="title">Trolled, Body-shamed and Slut-shamed: The Desecration of the Contemporary Bollywood Female Star on Social Media</div><div class="venue">Celebrity Studies, 11(1)</div></div>
+    <div class="pub"><div class="yr">—</div><div class="title">Instagram: Reconfiguring Bollywood Stars from Has-Beens to Uber Cool</div><div class="venue">Journal article</div></div>
+    <p style="margin-top:16px; color:var(--ink-soft); font-size:.9rem;">Also contributed chapters to the edited volumes <em>Reorienting Global Communication</em> (2010) and <em>Transnational Stardom</em> (2013).</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p class="lede">Department of Media Communication, American University of Sharjah, United Arab Emirates</p>
+    <div class="contact" style="margin-top:10px; display:flex; gap:18px; flex-wrap:wrap; font-size:.94rem;">
+      <a href="mailto:smitra@aus.edu" style="border-bottom:1px solid var(--line);">smitra@aus.edu</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Dr. Sreya Mitra · Media &amp; Cultural Studies, American University of Sharjah</div>
+</footer>
+
+</body>
+</html>
