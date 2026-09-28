@@ -1393,6 +1393,72 @@
       box-shadow: 0 0 35px rgba(198, 146, 52, 0.35);
     }
 
+    /* ═══ REGISTRATION & QR CODE PORTAL ═══ */
+    .reg-portal-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .reg-portal-card {
+      background: linear-gradient(135deg, rgba(16, 38, 29, 0.95), rgba(8, 20, 15, 0.97));
+      border: 1px solid rgba(198, 146, 52, 0.45);
+      border-radius: var(--radius-lg);
+      padding: 38px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 35px rgba(198, 146, 52, 0.18);
+      position: relative;
+      overflow: hidden;
+    }
+    .reg-portal-card::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(217, 167, 75, 0.22) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .reg-qr-wrapper {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 24px 22px 20px;
+      box-shadow: 0 16px 44px rgba(0, 0, 0, 0.65), 0 0 0 3px rgba(198, 146, 52, 0.75);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 280px;
+      margin: 0 auto;
+      transition: var(--transition);
+    }
+    .reg-qr-wrapper:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 22px 54px rgba(0, 0, 0, 0.8), 0 0 0 5px var(--gold-400);
+    }
+    .reg-qr-img {
+      width: 220px;
+      height: 220px;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+    }
+    .reg-qr-caption {
+      margin-top: 14px;
+      font-size: 0.84rem;
+      font-weight: 800;
+      color: #0c1a14;
+      font-family: 'Space Grotesk', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .reg-qr-sub {
+      font-size: 0.74rem;
+      color: #4a5c53;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
     /* ═══ ORGANIZERS & COLLABORATION ═══ */
     section#organizers {
       background: transparent;
@@ -1606,6 +1672,8 @@
       .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
       .stat-card { border-right: none; border-bottom: 1px solid rgba(198, 146, 52, 0.2); padding-bottom: 16px; }
       .cfp-banner { grid-template-columns: 1fr; padding: 36px; }
+      .reg-portal-grid { grid-template-columns: 1fr; gap: 28px; }
+      .reg-portal-card { padding: 26px 20px; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
     }
 
@@ -1678,13 +1746,14 @@
         <li><a href="#profiles">Keynote Speakers</a></li>
         <li><a href="#tracks">Tracks</a></li>
         <li><a href="#dates">Timeline</a></li>
+        <li><a href="#registration">Registration</a></li>
         <li><a href="#organizers">Organizers</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
       <div class="nav-actions">
-        <a href="#profiles" class="btn-nav">
-          <span>Explore Speakers</span> →
+        <a href="https://forms.gle/N14GcqGk45okExY97" target="_blank" rel="noopener" class="btn-nav" title="Online Registration Form">
+          <span>Register Online</span> ✍️
         </a>
       </div>
     </div>
@@ -1721,14 +1790,17 @@
         </div>
 
         <div class="hero-actions">
-          <a href="#profiles" class="btn-hero-primary">
-            <span>Explore Keynote Speakers</span> ↓
+          <a href="https://forms.gle/N14GcqGk45okExY97" target="_blank" rel="noopener" class="btn-hero-primary" style="box-shadow: 0 4px 22px rgba(198,146,52,0.65);">
+            <span>Register for Conference</span> ✍️
+          </a>
+          <a href="#registration" class="btn-hero-secondary" style="border-color:var(--gold-400); color:var(--gold-200);">
+            <span>Scan QR Code</span> 📱
+          </a>
+          <a href="#profiles" class="btn-hero-secondary">
+            <span>Keynote Speakers</span>
           </a>
           <a href="#tracks" class="btn-hero-secondary">
             <span>Research Tracks</span>
-          </a>
-          <a href="#dates" class="btn-hero-secondary">
-            <span>Important Dates</span>
           </a>
         </div>
       </div>
@@ -2153,11 +2225,16 @@
           <span class="date-desc">Formal peer-review communication sent to authors</span>
         </div>
 
-        <div class="date-card higgs-card">
+        <div class="date-card higgs-card" style="border-color:var(--gold-400);">
           <span class="date-icon">🎟️</span>
           <span class="date-stage">Registration Deadline</span>
           <span class="date-val">October 30, 2026</span>
           <span class="date-desc">Author &amp; delegate conference registration closes</span>
+          <div style="margin-top:12px;">
+            <a href="https://forms.gle/N14GcqGk45okExY97" target="_blank" rel="noopener" class="btn-nav" style="padding:6px 14px; font-size:0.75rem; text-decoration:none;">
+              <span>Register Now</span> ↗
+            </a>
+          </div>
         </div>
 
         <div class="date-card higgs-card" style="border-color:var(--gold-400);">
@@ -2181,6 +2258,77 @@
         <a href="#organizers" class="btn-nav" style="padding: 10px 20px; font-size: 0.82rem;">
           <span>Venue &amp; Host Details</span> →
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFERENCE REGISTRATION & QR PORTAL -->
+  <section class="section-block" id="registration">
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="eyebrow"><span class="pulse-dot"></span> Participation &amp; Registration</div>
+        <h2>Online Registration &amp; Delegate Portal</h2>
+        <p>Register online to participate, present your research paper, or attend the keynote and interdisciplinary track sessions at LLCSF 2026.</p>
+      </div>
+
+      <div class="reg-portal-card higgs-card">
+        <div class="reg-portal-grid">
+          <div>
+            <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(198,146,52,0.15); border:1px solid rgba(198,146,52,0.35); border-radius:999px; padding:6px 16px; margin-bottom:16px;">
+              <span style="font-size:0.95rem;">✍️</span>
+              <span style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--gold-300); font-weight:800; font-family:'Space Grotesk', sans-serif;">Official Google Form</span>
+            </div>
+
+            <h3 style="font-size:1.65rem; color:#ffffff; margin-bottom:12px; font-family:'Playfair Display', serif; line-height:1.3;">
+              Register Online for LLCSF 2026
+            </h3>
+
+            <p style="color:var(--text-platinum); font-size:0.95rem; line-height:1.65; margin-bottom:20px;">
+              The Department of Languages (English), St. Francis de Sales College (Autonomous), Bengaluru, in academic collaboration with the Institute for Social and Economic Change (ISEC), invites academicians, faculty scholars, research fellows, and postgraduate students to register for this two-day international conference.
+            </p>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px; margin-bottom:24px; padding:18px; background:rgba(0,0,0,0.35); border-radius:12px; border:1px solid rgba(198,146,52,0.25);">
+              <div style="font-size:0.86rem; color:var(--text-platinum);">
+                <strong style="color:var(--gold-400); display:block; margin-bottom:2px;">📄 Abstract Submission:</strong>
+                October 5, 2026
+              </div>
+              <div style="font-size:0.86rem; color:var(--text-platinum);">
+                <strong style="color:var(--gold-400); display:block; margin-bottom:2px;">🎟️ Registration Closes:</strong>
+                October 30, 2026
+              </div>
+              <div style="font-size:0.86rem; color:var(--text-platinum);">
+                <strong style="color:var(--gold-400); display:block; margin-bottom:2px;">📑 Full Paper Submission:</strong>
+                November 15, 2026
+              </div>
+              <div style="font-size:0.86rem; color:var(--text-platinum);">
+                <strong style="color:var(--gold-400); display:block; margin-bottom:2px;">🏛️ Conference Dates:</strong>
+                December 17–18, 2026
+              </div>
+            </div>
+
+            <div style="display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
+              <a href="https://forms.gle/N14GcqGk45okExY97" target="_blank" rel="noopener" class="btn-nav" style="padding:12px 26px; font-size:0.92rem; text-decoration:none; box-shadow:0 6px 24px rgba(198,146,52,0.5);">
+                <span>Open Registration Form</span> ↗
+              </a>
+              <button type="button" id="copyRegLinkBtn" onclick="copyRegistrationLink()" class="btn-hero-secondary" style="padding:11px 20px; font-size:0.86rem; cursor:pointer; background:rgba(255,255,255,0.06); border:1px solid var(--gold-400); color:var(--gold-200); border-radius:999px;">
+                <span id="copyBtnText">📋 Copy Link</span>
+              </button>
+            </div>
+
+            <div style="margin-top:16px; font-size:0.82rem; color:#A8B5A2;">
+              Direct Link: <a href="https://forms.gle/N14GcqGk45okExY97" target="_blank" rel="noopener" style="color:var(--gold-300); text-decoration:underline; word-break:break-all;">https://forms.gle/N14GcqGk45okExY97</a>
+            </div>
+          </div>
+
+          <!-- QR Code Badge Card -->
+          <div style="display:flex; justify-content:center;">
+            <div class="reg-qr-wrapper">
+              <img src="assets/images/registration-qr.png" alt="LLCSF 2026 Registration QR Code" class="reg-qr-img" width="220" height="220" loading="lazy">
+              <span class="reg-qr-caption">Scan to Register</span>
+              <span class="reg-qr-sub">Scan with your smartphone camera to open Google Form instantly</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -2236,9 +2384,14 @@
           </p>
         </div>
         <div style="display:flex; flex-direction:column; gap:14px; align-items:flex-start;">
-          <a href="#contact" class="btn-cfp">
-            <span>Submission Guidelines</span> ✉️
-          </a>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a href="https://forms.gle/N14GcqGk45okExY97" target="_blank" rel="noopener" class="btn-cfp" style="background:linear-gradient(135deg, var(--gold-400), var(--gold-500)); color:#07150f; font-weight:800;">
+              <span>Register &amp; Submit Online</span> ↗
+            </a>
+            <a href="#registration" class="btn-cfp" style="background:rgba(255,255,255,0.08); border:1px solid rgba(198,146,52,0.4); color:#ffffff;">
+              <span>Scan QR Code</span> 📱
+            </a>
+          </div>
           <span style="font-size:0.8rem; color:var(--gold-200);">Abstract word limit: 300 words · MLA 9th Edition</span>
         </div>
       </div>
@@ -2327,6 +2480,8 @@
             <li><a href="#profiles">Keynote Speakers</a></li>
             <li><a href="#tracks">Academic Tracks</a></li>
             <li><a href="#dates">Timeline &amp; Dates</a></li>
+            <li><a href="#registration">Registration &amp; QR Code</a></li>
+            <li><a href="https://forms.gle/N14GcqGk45okExY97" target="_blank" rel="noopener" style="color:var(--gold-300);">Online Registration Form ↗</a></li>
             <li><a href="#organizers">Host Institutions</a></li>
           </ul>
         </div>
@@ -2591,6 +2746,24 @@
         if (r.top < window.innerHeight) el.classList.add('visible');
       });
     }, 80);
+
+    /* ── 11. COPY REGISTRATION LINK TO CLIPBOARD ── */
+    function copyRegistrationLink() {
+      const url = "https://forms.gle/N14GcqGk45okExY97";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => {
+          const btnText = document.getElementById("copyBtnText");
+          if (btnText) {
+            btnText.innerText = "✓ Copied Link!";
+            setTimeout(() => { btnText.innerText = "📋 Copy Link"; }, 3000);
+          }
+        }).catch(() => {
+          prompt("Copy this registration link:", url);
+        });
+      } else {
+        prompt("Copy this registration link:", url);
+      }
+    }
   </script>
 </body>
 </html>
