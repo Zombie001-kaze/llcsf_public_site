@@ -365,6 +365,11 @@
       border-color: #b0793a;
       box-shadow: 0 0 14px rgba(176, 121, 58, 0.4);
     }
+    .brand-logo-sfs {
+      border-color: var(--gold-400);
+      box-shadow: 0 0 14px rgba(198, 146, 52, 0.4);
+      padding: 1px;
+    }
     .brand-logo-divider {
       display: inline-block;
       width: 1px;
@@ -476,7 +481,6 @@
       background: url('assets/images/logo-circle.png') no-repeat center center / contain;
       opacity: 0.05;
       filter: drop-shadow(0 0 35px rgba(198, 146, 52, 0.4));
-      animation: slowSpin 90s linear infinite;
     }
     .hero-watermark-isec {
       position: absolute;
@@ -487,15 +491,6 @@
       background: url('assets/images/isec-logo-circle.png') no-repeat center center / contain;
       opacity: 0.05;
       filter: drop-shadow(0 0 35px rgba(176, 121, 58, 0.4));
-      animation: slowSpinReverse 100s linear infinite;
-    }
-    @keyframes slowSpin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    @keyframes slowSpinReverse {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(-360deg); }
     }
 
     /* ═══ HERO SECTION ═══ */
@@ -1620,6 +1615,12 @@
       .tracks-grid { grid-template-columns: 1fr; }
       .dates-container { grid-template-columns: 1fr; }
       nav .nav-links { display: none; }
+      .nav-actions { display: none; }
+      .brand-sub { display: none; }
+      .brand-logo-img { width: 36px; height: 36px; }
+      .brand-logo-isec { width: 34px; height: 34px; }
+      .brand-logo-divider { height: 22px; }
+      .brand-title { font-size: 1.05rem; }
       nav.menu-open .nav-links {
         display: flex;
         flex-direction: column;
@@ -1659,6 +1660,8 @@
   <nav class="top-nav" id="topNav">
     <div class="wrap nav-container">
       <a href="index.html" class="brand-group" title="LLCSF 2026 Home">
+        <img src="assets/images/sfs-college-seal.png" alt="SFS College Crest" class="brand-logo-img brand-logo-sfs">
+        <span class="brand-logo-divider"></span>
         <img src="assets/images/logo-circle.png" alt="LLCSF Official Emblem Logo" class="brand-logo-img">
         <span class="brand-logo-divider"></span>
         <img src="assets/images/isec-logo-circle.png" alt="ISEC Logo" class="brand-logo-img brand-logo-isec">
