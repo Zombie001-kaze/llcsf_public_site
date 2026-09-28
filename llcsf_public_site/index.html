@@ -459,78 +459,43 @@
       cursor: pointer;
     }
 
-    /* ═══ SFS COLLEGE TOP-RIGHT SEAL WATERMARK ═══ */
-    .watermark-top-right {
-      position: fixed;
-      top: 88px;
-      right: 28px;
-      z-index: 95;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: var(--transition);
+    /* ═══ DUAL LOGO AMBIENT WATERMARK ═══ */
+    .hero-watermark-dual {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
     }
-    .watermark-top-right a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-decoration: none;
+    .hero-watermark-llcsf {
+      position: absolute;
+      top: -40px;
+      left: -40px;
+      width: 500px;
+      height: 500px;
+      background: url('assets/images/logo-circle.png') no-repeat center center / contain;
+      opacity: 0.05;
+      filter: drop-shadow(0 0 35px rgba(198, 146, 52, 0.4));
+      animation: slowSpin 90s linear infinite;
     }
-    .watermark-seal-img {
-      width: 86px;
-      height: 86px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.96);
-      padding: 4px;
-      border: 3px solid var(--gold-400);
-      box-shadow: 
-        0 10px 28px rgba(0, 0, 0, 0.6),
-        0 0 24px rgba(198, 146, 52, 0.4);
-      opacity: 0.92;
-      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-    .watermark-top-right:hover .watermark-seal-img {
-      opacity: 1;
-      transform: scale(1.12) rotate(4deg);
-      border-color: var(--gold-300);
-      box-shadow: 
-        0 14px 38px rgba(0, 0, 0, 0.8),
-        0 0 35px rgba(198, 146, 52, 0.7);
-    }
-    .watermark-label {
-      margin-top: 6px;
-      font-size: 0.65rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--gold-300);
-      background: rgba(6, 17, 12, 0.95);
-      backdrop-filter: blur(8px);
-      padding: 3px 9px;
-      border-radius: 999px;
-      border: 1px solid rgba(217, 167, 75, 0.4);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
-      white-space: nowrap;
-      transition: var(--transition);
-    }
-    .watermark-top-right:hover .watermark-label {
-      background: var(--gold-500);
-      color: #030806;
-      border-color: #fff;
-    }
-
-    /* Ambient Hero Watermark Background */
-    .hero-watermark-bg {
+    .hero-watermark-isec {
       position: absolute;
       top: -40px;
       right: -40px;
       width: 480px;
       height: 480px;
-      background: url('assets/images/sfs-college-seal.png') no-repeat center center / contain;
+      background: url('assets/images/isec-logo-circle.png') no-repeat center center / contain;
       opacity: 0.05;
-      pointer-events: none;
-      z-index: 1;
-      filter: drop-shadow(0 0 40px rgba(198,146,52,0.3));
+      filter: drop-shadow(0 0 35px rgba(176, 121, 58, 0.4));
+      animation: slowSpinReverse 100s linear infinite;
+    }
+    @keyframes slowSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes slowSpinReverse {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
     }
 
     /* ═══ HERO SECTION ═══ */
@@ -1671,19 +1636,6 @@
       .scholar-avatar { margin-bottom: 12px; }
       .dual-emblem-row { gap: 14px; }
       .emblem-card { max-width: 140px; }
-      .watermark-top-right {
-        top: 80px;
-        right: 12px;
-      }
-      .watermark-seal-img {
-        width: 60px;
-        height: 60px;
-        padding: 2px;
-      }
-      .watermark-label {
-        font-size: 0.56rem;
-        padding: 2px 6px;
-      }
     }
   </style>
 </head>
@@ -1735,17 +1687,12 @@
     </div>
   </nav>
 
-  <!-- SFS COLLEGE OFFICIAL SEAL WATERMARK (TOP RIGHT) -->
-  <aside class="watermark-top-right" aria-label="Host Institution Seal Watermark">
-    <a href="#organizers" title="Host Institution: St. Francis de Sales College (Autonomous), Bengaluru">
-      <img src="assets/images/sfs-college-seal.png" alt="St. Francis de Sales College Official Seal Watermark" class="watermark-seal-img">
-      <span class="watermark-label">Host: SFS College</span>
-    </a>
-  </aside>
-
   <!-- HERO SECTION -->
   <header class="hero-section" id="hero">
-    <div class="hero-watermark-bg" aria-hidden="true"></div>
+    <div class="hero-watermark-dual" aria-hidden="true">
+      <div class="hero-watermark-llcsf"></div>
+      <div class="hero-watermark-isec"></div>
+    </div>
     <div class="wrap hero-grid">
       <div class="hero-content reveal-left">
         <div class="eyebrow">
@@ -1799,7 +1746,6 @@
                 fetchpriority="high"
               >
             </div>
-            <div class="emblem-logo-label">LLCSF 2026<br>Conference Emblem</div>
           </div>
 
           <!-- Center divider -->
@@ -1820,12 +1766,7 @@
                 loading="eager"
               >
             </div>
-            <div class="emblem-logo-label">ISEC Bengaluru<br>Academic Partner</div>
           </div>
-        </div>
-
-        <div class="emblem-caption">
-          Official Emblem · LLCSF 2026 &nbsp;×&nbsp; ISEC Collaboration
         </div>
       </div>
     </div>
