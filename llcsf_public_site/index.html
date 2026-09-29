@@ -1665,6 +1665,160 @@
       line-height: 1.4;
     }
 
+    /* ═══ REGISTRATION FEE STRUCTURE STYLING ═══ */
+    .reg-fee-card {
+      background: linear-gradient(135deg, rgba(16, 38, 29, 0.94), rgba(8, 20, 15, 0.98));
+      border: 1px solid rgba(198, 146, 52, 0.4);
+      border-radius: var(--radius-lg);
+      padding: 38px 34px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 32px rgba(198, 146, 52, 0.16);
+      position: relative;
+      overflow: hidden;
+      margin-top: 36px;
+    }
+    .reg-fee-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold-400), #34d399, var(--gold-400));
+    }
+    .reg-fee-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 26px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(198, 146, 52, 0.22);
+    }
+    .reg-fee-badge-pill {
+      background: rgba(198, 146, 52, 0.15);
+      border: 1px solid rgba(217, 167, 75, 0.35);
+      padding: 6px 18px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .reg-fee-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(198, 146, 52, 0.28);
+      background: rgba(3, 8, 6, 0.6);
+      box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+    .reg-fee-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      text-align: left;
+    }
+    .reg-fee-table thead th {
+      background: rgba(20, 50, 40, 0.88);
+      color: var(--gold-300);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 700;
+      padding: 16px 24px;
+      border-bottom: 2px solid rgba(198, 146, 52, 0.4);
+    }
+    .reg-fee-table tbody tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      transition: background 0.2s ease;
+    }
+    .reg-fee-table tbody tr:hover:not(.table-subgroup-row) {
+      background: rgba(198, 146, 52, 0.08);
+    }
+    .reg-fee-table tbody tr:last-child {
+      border-bottom: none;
+    }
+    .reg-fee-table td {
+      padding: 16px 24px;
+      vertical-align: middle;
+    }
+    .table-subgroup-row td {
+      background: rgba(10, 24, 18, 0.92);
+      padding: 12px 24px;
+      border-top: 1px solid rgba(198, 146, 52, 0.3);
+      border-bottom: 1px solid rgba(198, 146, 52, 0.3);
+    }
+    .subgroup-tag {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold-300);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .subgroup-intl {
+      color: #6ee7b7;
+    }
+    .fee-category strong {
+      display: block;
+      color: #ffffff;
+      font-size: 0.98rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .fee-sub {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+    .fee-price {
+      text-align: right;
+      white-space: nowrap;
+    }
+    .price-val {
+      font-family: 'Space Grotesk', monospace, sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--gold-300);
+      background: rgba(198, 146, 52, 0.12);
+      border: 1px solid rgba(198, 146, 52, 0.3);
+      padding: 6px 16px;
+      border-radius: 8px;
+      display: inline-block;
+      text-shadow: 0 0 12px rgba(217, 167, 75, 0.3);
+    }
+    .price-intl {
+      color: #6ee7b7;
+      background: rgba(52, 211, 153, 0.1);
+      border-color: rgba(52, 211, 153, 0.3);
+      text-shadow: 0 0 12px rgba(52, 211, 153, 0.25);
+    }
+    .fee-highlight {
+      box-shadow: 0 0 14px rgba(217, 167, 75, 0.35);
+    }
+    .reg-fee-footer {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(198, 146, 52, 0.22);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .fee-inclusions {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      max-width: 720px;
+    }
+
     /* ═══ ORGANIZERS & COLLABORATION ═══ */
     section#organizers {
       background: transparent;
@@ -2620,6 +2774,142 @@
               <span class="reg-qr-caption">Scan to Register</span>
               <span class="reg-qr-sub">Scan with your smartphone camera to open Google Form instantly</span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- REGISTRATION FEE STRUCTURE (OFFICIAL SCHEDULE) -->
+      <div class="reg-fee-card higgs-card reveal">
+        <div class="reg-fee-header">
+          <div>
+            <div class="eyebrow" style="margin-bottom: 8px;">
+              <span class="pulse-dot"></span> Delegate Fee Schedule
+            </div>
+            <h3 style="font-size: 1.6rem; color: #ffffff; font-family: 'Playfair Display', serif;">
+              Registration Fee Structure
+            </h3>
+            <p style="color: var(--text-platinum); font-size: 0.92rem; margin-top: 4px;">
+              Official registration fees for paper presenters and participating delegates across national and international tiers.
+            </p>
+          </div>
+          <div class="reg-fee-badge-pill">
+            <span style="font-size: 0.9rem;">🗓️</span>
+            <span style="color: var(--gold-300); font-weight: 700; font-size: 0.82rem; font-family: 'Space Grotesk', sans-serif;">Deadline: October 30, 2026</span>
+          </div>
+        </div>
+
+        <!-- Registration Fee Table -->
+        <div class="reg-fee-table-wrap">
+          <table class="reg-fee-table" aria-label="Conference Registration Fees Schedule">
+            <thead>
+              <tr>
+                <th scope="col" style="text-align: left;">Participant Category</th>
+                <th scope="col" style="text-align: right;">Registration Fee</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Indian Participants Subgroup -->
+              <tr class="table-subgroup-row">
+                <td colspan="2">
+                  <span class="subgroup-tag">🇮🇳 Indian Delegates (INR)</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="fee-category">
+                  <strong>Indian Faculty / Academician</strong>
+                  <span class="fee-sub">University and College Faculty Members</span>
+                </td>
+                <td class="fee-price">
+                  <span class="price-val">₹500</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="fee-category">
+                  <strong>Indian Research Scholar</strong>
+                  <span class="fee-sub">Ph.D. and M.Phil. Research Scholars</span>
+                </td>
+                <td class="fee-price">
+                  <span class="price-val">₹400</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="fee-category">
+                  <strong>Indian Student</strong>
+                  <span class="fee-sub">Undergraduate &amp; Postgraduate Students</span>
+                </td>
+                <td class="fee-price">
+                  <span class="price-val fee-highlight">₹300</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="fee-category">
+                  <strong>Indian Independent Researcher</strong>
+                  <span class="fee-sub">Independent Scholars, Writers &amp; Non-Affiliated Researchers</span>
+                </td>
+                <td class="fee-price">
+                  <span class="price-val">₹500</span>
+                </td>
+              </tr>
+
+              <!-- Foreign National Participants Subgroup -->
+              <tr class="table-subgroup-row">
+                <td colspan="2">
+                  <span class="subgroup-tag subgroup-intl">🌐 Foreign Nationals (USD)</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="fee-category">
+                  <strong>Foreign National – Faculty / Academician</strong>
+                  <span class="fee-sub">International University &amp; College Faculty Members</span>
+                </td>
+                <td class="fee-price">
+                  <span class="price-val price-intl">USD 25</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="fee-category">
+                  <strong>Foreign National – Research Scholar</strong>
+                  <span class="fee-sub">International Ph.D. &amp; Graduate Research Scholars</span>
+                </td>
+                <td class="fee-price">
+                  <span class="price-val price-intl">USD 20</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="fee-category">
+                  <strong>Foreign National – Student</strong>
+                  <span class="fee-sub">International Undergraduate &amp; Postgraduate Students</span>
+                </td>
+                <td class="fee-price">
+                  <span class="price-val price-intl fee-highlight">USD 15</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="fee-category">
+                  <strong>Foreign National – Independent Researcher</strong>
+                  <span class="fee-sub">International Independent Researchers &amp; Authors</span>
+                </td>
+                <td class="fee-price">
+                  <span class="price-val price-intl">USD 20</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Inclusions & Form CTA Strip -->
+        <div class="reg-fee-footer">
+          <div class="fee-inclusions">
+            <span style="font-size: 1.15rem; color: var(--gold-400);">ℹ️</span>
+            <div>
+              <strong style="color: #ffffff; font-size: 0.88rem; display: block;">Registration Fee Entitlements</strong>
+              <span style="color: var(--text-platinum); font-size: 0.82rem;">Fee covers conference kit, certificate of presentation/participation, admission to all 6 academic tracks &amp; keynote sessions, and eligibility for the Best Paper Award &amp; ISBN Book Publication.</span>
+            </div>
+          </div>
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <a href="https://forms.gle/N14GcqGk45okExY97" target="_blank" rel="noopener" class="btn-nav" style="padding: 10px 22px; font-size: 0.86rem; text-decoration: none; white-space: nowrap; box-shadow: 0 4px 18px rgba(198,146,52,0.4);">
+              <span>Register Online &amp; Pay</span> ↗
+            </a>
           </div>
         </div>
       </div>
