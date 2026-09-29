@@ -781,12 +781,67 @@
       gap: 16px;
       flex-wrap: wrap;
       font-family: 'Cinzel', serif;
-      font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+      font-size: clamp(1.02rem, 1.45vw, 1.28rem);
       font-weight: 700;
-      color: #ffffff;
-      letter-spacing: 0.03em;
-      line-height: 1.3;
-      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
+      letter-spacing: 0.035em;
+      line-height: 1.35;
+      text-align: center;
+    }
+    .banner-inst-unit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .banner-inst {
+      background: linear-gradient(135deg, #ffffff 0%, #fae8c8 25%, #d9a74b 55%, #e8c06f 80%, #ffffff 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.85));
+      animation: bannerGoldShimmer 8s ease infinite;
+      display: inline-block;
+      transition: filter 0.3s ease;
+    }
+    .banner-inst-sfs {
+      background: linear-gradient(135deg, #ffffff 0%, #fde68a 25%, #eab308 55%, #d9a74b 80%, #fff7ed 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .banner-inst-isec {
+      background: linear-gradient(135deg, #ffffff 0%, #fef3c7 25%, #d9a74b 55%, #fcd34d 80%, #ffffff 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .banner-inst:hover {
+      filter: drop-shadow(0 2px 12px rgba(217, 167, 75, 0.6)) drop-shadow(0 0 18px rgba(217, 167, 75, 0.4));
+    }
+    @keyframes bannerGoldShimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .inst-tag {
+      font-size: 0.68em;
+      font-family: 'Space Grotesk', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: rgba(198, 146, 52, 0.16);
+      border: 1px solid rgba(217, 167, 75, 0.45);
+      color: var(--gold-300);
+      -webkit-text-fill-color: var(--gold-300);
+      vertical-align: middle;
+      font-weight: 700;
+      box-shadow: 0 0 8px rgba(198, 146, 52, 0.2);
+    }
+    .banner-cross-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
     .banner-cross {
       display: inline-flex;
@@ -800,12 +855,22 @@
       color: var(--gold-300);
       font-size: 0.76rem;
       font-weight: 800;
-      box-shadow: 0 0 12px rgba(198, 146, 52, 0.35);
+      box-shadow: 0 0 14px rgba(198, 146, 52, 0.4);
     }
     .banner-dept-line {
       font-size: 0.88rem;
       color: var(--text-platinum);
       letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 1100px) {
+      .banner-institutions-title {
+        flex-direction: column;
+        gap: 6px;
+      }
+      .banner-cross-wrap {
+        margin: 2px 0;
+      }
     }
 
     /* ═══ HERO MAIN CONTENT (CENTERED) ═══ */
@@ -819,9 +884,8 @@
     .hero-content-centered h1 {
       font-size: clamp(2.4rem, 4.8vw, 4.2rem);
       line-height: 1.12;
-      color: #ffffff;
       margin: 0 0 18px;
-      text-shadow: 0 4px 28px rgba(0, 0, 0, 0.7);
+      filter: drop-shadow(0 4px 28px rgba(0, 0, 0, 0.75));
     }
     .hero-content-centered .subtitle {
       font-size: clamp(1.15rem, 1.8vw, 1.45rem);
@@ -1755,7 +1819,7 @@
       .banner-emblem-wrap.right { grid-area: logo2; }
       .banner-core-text { grid-area: text; }
       .banner-emblem-img { width: 80px; height: 80px; }
-      .banner-institutions-title { font-size: 0.98rem; gap: 8px; }
+      .banner-institutions-title { font-size: 0.92rem; gap: 6px; }
     }
   </style>
 </head>
@@ -1835,9 +1899,16 @@
             <span class="pulse-dot"></span> International Academic Collaboration · Bengaluru 2026
           </div>
           <div class="banner-institutions-title">
-            <span class="banner-inst">St. Francis de Sales College (Autonomous)</span>
-            <span class="banner-cross">×</span>
-            <span class="banner-inst">Institute for Social and Economic Change</span>
+            <div class="banner-inst-unit">
+              <span class="banner-inst banner-inst-sfs">St. Francis de Sales College</span>
+              <span class="inst-tag">Autonomous</span>
+            </div>
+            <div class="banner-cross-wrap">
+              <span class="banner-cross" aria-hidden="true">×</span>
+            </div>
+            <div class="banner-inst-unit">
+              <span class="banner-inst banner-inst-isec">Institute for Social and Economic Change</span>
+            </div>
           </div>
           <div class="banner-dept-line">
             Department of Languages (English), SFS College &amp; ISEC Bengaluru
