@@ -997,10 +997,9 @@
 
     /* ═══ ABOUT / CONCEPT NOTE ═══ */
     .about-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 50px;
-      align-items: center;
+      display: block;
+      max-width: 960px;
+      margin: 0 auto;
     }
     .about-text p {
       font-size: 1.05rem;
@@ -1010,29 +1009,29 @@
     }
     .about-quote {
       border-left: 4px solid var(--gold-400);
-      padding: 20px 26px;
+      padding: 22px 28px;
       background: rgba(14, 32, 24, 0.7);
       border-radius: 0 var(--radius-md) var(--radius-md) 0;
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.18rem;
+      font-size: 1.2rem;
       font-style: italic;
       color: #ffffff;
-      margin: 26px 0;
+      margin: 28px 0;
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
       border: 1px solid rgba(198,146,52,0.2);
       border-left-width: 4px;
     }
     .about-features {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 18px;
-      margin-top: 26px;
+      margin-top: 28px;
     }
     .about-feature-item {
       background: var(--card-glass);
       border: 1px solid var(--card-border);
       border-radius: var(--radius-md);
-      padding: 20px;
+      padding: 22px 20px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.3);
       backdrop-filter: blur(12px);
       transition: var(--transition);
@@ -1057,54 +1056,6 @@
       color: var(--text-platinum);
       margin: 0;
       line-height: 1.55;
-    }
-
-    .about-banner-card {
-      background: var(--card-glass);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius-lg);
-      padding: 26px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-      text-align: center;
-      backdrop-filter: blur(16px);
-    }
-    .about-banner-img {
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      border: 1px solid rgba(198,146,52,0.3);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-      margin-bottom: 22px;
-    }
-    .banner-institutions {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      text-align: left;
-    }
-    .inst-badge {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 14px 16px;
-      background: rgba(16, 38, 29, 0.7);
-      border-radius: var(--radius-sm);
-      border-left: 3px solid var(--gold-400);
-      border: 1px solid rgba(198,146,52,0.2);
-      border-left-width: 4px;
-      transition: var(--transition);
-    }
-    .inst-badge:hover {
-      border-color: var(--gold-400);
-      transform: translateX(4px);
-    }
-    .inst-badge strong {
-      display: block;
-      font-size: 0.92rem;
-      color: #ffffff;
-    }
-    .inst-badge span {
-      font-size: 0.82rem;
-      color: var(--text-platinum);
     }
 
     /* ═══ SCHOLAR PORTFOLIOS SHOWCASE ═══ */
@@ -2224,28 +2175,6 @@
           <div class="about-feature-item">
             <h4><span>📊</span> Socio-Economic Policy</h4>
             <p>Interdisciplinary evidence from ISEC informing inclusive sustainability.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="about-banner-card higgs-card">
-        <div class="about-banner-img">
-          <img src="assets/images/conference-banner.png" alt="LLCSF Official Conference Banner and Title Emblem" loading="lazy">
-        </div>
-        <div class="banner-institutions">
-          <div class="inst-badge">
-            <span style="font-size:1.3rem;">🏛️</span>
-            <div>
-              <strong>St. Francis de Sales College (Autonomous)</strong>
-              <span>Host Institution · Department of Languages (English), Electronics City, Bengaluru</span>
-            </div>
-          </div>
-          <div class="inst-badge">
-            <span style="font-size:1.3rem;">📚</span>
-            <div>
-              <strong>Institute for Social and Economic Change (ISEC)</strong>
-              <span>Confirmed Academic Collaboration · Centre for Economic Studies and Policy, Bengaluru</span>
-            </div>
           </div>
         </div>
       </div>
