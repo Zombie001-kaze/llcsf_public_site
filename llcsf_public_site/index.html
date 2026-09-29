@@ -681,22 +681,23 @@
       box-shadow: 0 8px 24px rgba(0,0,0,0.4);
     }
 
-    /* ═══ OFFICIAL DUAL-LOGO COLLABORATION BANNER ═══ */
+    /* ═══ OFFICIAL COLLABORATION BANNER (EXPANDED & HIGH-IMPACT) ═══ */
     .hero-partnership-banner {
-      background: linear-gradient(135deg, rgba(20, 48, 36, 0.78) 0%, rgba(10, 24, 18, 0.90) 50%, rgba(6, 17, 12, 0.96) 100%);
-      border: 1px solid rgba(198, 146, 52, 0.45);
-      border-radius: 20px;
-      padding: 24px 38px;
+      background: linear-gradient(135deg, rgba(20, 48, 36, 0.82) 0%, rgba(10, 24, 18, 0.94) 50%, rgba(6, 17, 12, 0.98) 100%);
+      border: 1.5px solid rgba(198, 146, 52, 0.48);
+      border-radius: var(--radius-lg);
+      padding: 34px 44px;
       margin-bottom: 46px;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      gap: 30px;
+      justify-content: center;
+      text-align: center;
       box-shadow: 
-        0 18px 48px rgba(0, 0, 0, 0.6),
-        0 0 35px rgba(198, 146, 52, 0.18),
-        inset 0 1px 0 rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(14px);
+        0 20px 54px rgba(0, 0, 0, 0.7),
+        0 0 45px rgba(198, 146, 52, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(16px);
       position: relative;
       z-index: 3;
     }
@@ -707,170 +708,122 @@
       left: 10%;
       right: 10%;
       height: 2px;
-      background: linear-gradient(90deg, transparent, var(--gold-400), transparent);
+      background: linear-gradient(90deg, transparent, var(--gold-400), #6ee7b7, var(--gold-400), transparent);
     }
-    .banner-emblem-wrap {
-      flex-shrink: 0;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .banner-emblem-img {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background: #ffffff;
-      padding: 5px;
-      border: 2.5px solid var(--gold-400);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.65), 0 0 24px rgba(198, 146, 52, 0.4);
-      object-fit: cover;
-      display: block;
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-      position: relative;
-      z-index: 2;
-    }
-    .banner-emblem-img:hover {
-      transform: scale(1.08) rotate(2deg);
-      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.8), 0 0 32px rgba(217, 167, 75, 0.6);
-    }
-    .banner-emblem-ring {
-      position: absolute;
-      width: calc(100% + 22px);
-      height: calc(100% + 22px);
-      border-radius: 50%;
-      border: 1px dashed rgba(217, 167, 75, 0.45);
-      pointer-events: none;
-      animation: spinSlow 20s linear infinite;
-      z-index: 1;
-    }
-    .banner-emblem-ring-alt {
-      animation: spinReverse 26s linear infinite;
-      border-color: rgba(52, 211, 153, 0.35);
-    }
-    @keyframes spinSlow { 100% { transform: rotate(360deg); } }
-    @keyframes spinReverse { 100% { transform: rotate(-360deg); } }
-
     .banner-core-text {
-      flex: 1;
+      width: 100%;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 14px;
     }
     .banner-eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-size: 0.74rem;
+      font-size: 0.78rem;
       font-family: 'Space Grotesk', sans-serif;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.18em;
       color: var(--gold-300);
       font-weight: 700;
-      background: rgba(198, 146, 52, 0.12);
-      border: 1px solid rgba(198, 146, 52, 0.32);
-      padding: 4px 14px;
+      background: rgba(198, 146, 52, 0.14);
+      border: 1px solid rgba(198, 146, 52, 0.38);
+      padding: 5px 18px;
       border-radius: 999px;
+      box-shadow: 0 0 14px rgba(198, 146, 52, 0.2);
     }
     .banner-institutions-title {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
+      gap: 10px;
       font-family: 'Cinzel', serif;
-      font-size: clamp(1.02rem, 1.45vw, 1.28rem);
-      font-weight: 700;
-      letter-spacing: 0.035em;
-      line-height: 1.35;
+      font-size: clamp(1.4rem, 2.35vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      line-height: 1.28;
       text-align: center;
+      margin: 4px 0;
     }
     .banner-inst-unit {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 12px;
       flex-wrap: wrap;
     }
     .banner-inst {
-      background: linear-gradient(135deg, #ffffff 0%, #fae8c8 25%, #d9a74b 55%, #e8c06f 80%, #ffffff 100%);
+      background: linear-gradient(135deg, #ffffff 0%, #fde68a 22%, #d9a74b 55%, #fcd34d 80%, #ffffff 100%);
       background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.85));
+      filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 22px rgba(217, 167, 75, 0.45));
       animation: bannerGoldShimmer 8s ease infinite;
       display: inline-block;
       transition: filter 0.3s ease;
     }
     .banner-inst-sfs {
-      background: linear-gradient(135deg, #ffffff 0%, #fde68a 25%, #eab308 55%, #d9a74b 80%, #fff7ed 100%);
+      background: linear-gradient(135deg, #ffffff 0%, #fde68a 20%, #eab308 50%, #d9a74b 78%, #ffffff 100%);
       background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .banner-inst-isec {
-      background: linear-gradient(135deg, #ffffff 0%, #fef3c7 25%, #d9a74b 55%, #fcd34d 80%, #ffffff 100%);
+      background: linear-gradient(135deg, #ffffff 0%, #fef3c7 20%, #d9a74b 50%, #fcd34d 78%, #ffffff 100%);
       background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .banner-inst:hover {
-      filter: drop-shadow(0 2px 12px rgba(217, 167, 75, 0.6)) drop-shadow(0 0 18px rgba(217, 167, 75, 0.4));
+      filter: drop-shadow(0 4px 16px rgba(217, 167, 75, 0.7)) drop-shadow(0 0 30px rgba(217, 167, 75, 0.6));
     }
     @keyframes bannerGoldShimmer {
       0%, 100% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
     }
     .inst-tag {
-      font-size: 0.68em;
+      font-size: 0.52em;
       font-family: 'Space Grotesk', sans-serif;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      padding: 2px 8px;
-      border-radius: 6px;
-      background: rgba(198, 146, 52, 0.16);
-      border: 1px solid rgba(217, 167, 75, 0.45);
-      color: var(--gold-300);
-      -webkit-text-fill-color: var(--gold-300);
+      letter-spacing: 0.14em;
+      padding: 4px 12px;
+      border-radius: 8px;
+      background: rgba(198, 146, 52, 0.22);
+      border: 1.5px solid var(--gold-400);
+      color: var(--gold-200);
+      -webkit-text-fill-color: var(--gold-200);
       vertical-align: middle;
-      font-weight: 700;
-      box-shadow: 0 0 8px rgba(198, 146, 52, 0.2);
+      font-weight: 800;
+      box-shadow: 0 0 12px rgba(198, 146, 52, 0.35);
     }
     .banner-cross-wrap {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      margin: 2px 0;
     }
     .banner-cross {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 28px;
-      height: 28px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       background: rgba(198, 146, 52, 0.22);
       border: 1.5px solid var(--gold-400);
       color: var(--gold-300);
-      font-size: 0.76rem;
+      font-size: 0.85rem;
       font-weight: 800;
-      box-shadow: 0 0 14px rgba(198, 146, 52, 0.4);
+      box-shadow: 0 0 16px rgba(198, 146, 52, 0.45);
     }
     .banner-dept-line {
-      font-size: 0.88rem;
+      font-size: 0.98rem;
       color: var(--text-platinum);
-      letter-spacing: 0.02em;
-    }
-
-    @media (max-width: 1100px) {
-      .banner-institutions-title {
-        flex-direction: column;
-        gap: 6px;
-      }
-      .banner-cross-wrap {
-        margin: 2px 0;
-      }
+      letter-spacing: 0.04em;
+      font-weight: 500;
     }
 
     /* ═══ HERO MAIN CONTENT (CENTERED) ═══ */
@@ -2063,19 +2016,16 @@
       .menu-toggle { display: block; }
       .card-top { flex-direction: column; align-items: center; text-align: center; }
       .hero-partnership-banner {
-        padding: 20px 16px;
-        gap: 16px;
-        display: grid;
-        grid-template-areas:
-          "logo1 logo2"
-          "text text";
-        justify-items: center;
+        padding: 24px 18px;
+        margin-bottom: 32px;
       }
-      .banner-emblem-wrap.left { grid-area: logo1; }
-      .banner-emblem-wrap.right { grid-area: logo2; }
-      .banner-core-text { grid-area: text; }
-      .banner-emblem-img { width: 80px; height: 80px; }
-      .banner-institutions-title { font-size: 0.92rem; gap: 6px; }
+      .banner-institutions-title { 
+        font-size: 1.18rem; 
+        gap: 8px; 
+      }
+      .banner-dept-line {
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
@@ -2138,19 +2088,8 @@
       <div class="hero-watermark-isec"></div>
     </div>
     <div class="wrap">
-      <!-- ═══ OFFICIAL DUAL-LOGO COLLABORATION BANNER ═══ -->
+      <!-- ═══ OFFICIAL COLLABORATION BANNER ═══ -->
       <div class="hero-partnership-banner reveal">
-        <div class="banner-emblem-wrap left">
-          <div class="banner-emblem-ring"></div>
-          <img
-            src="assets/images/logo-circle.png"
-            alt="LLCSF 2026 Conference Emblem"
-            class="banner-emblem-img"
-            fetchpriority="high"
-            data-tip="LLCSF 2026 Conference Emblem"
-          >
-        </div>
-
         <div class="banner-core-text">
           <div class="banner-eyebrow">
             <span class="pulse-dot"></span> International Academic Collaboration · Bengaluru 2026
@@ -2170,17 +2109,6 @@
           <div class="banner-dept-line">
             Department of Languages (English), SFS College &amp; ISEC Bengaluru
           </div>
-        </div>
-
-        <div class="banner-emblem-wrap right">
-          <div class="banner-emblem-ring banner-emblem-ring-alt"></div>
-          <img
-            src="assets/images/isec-logo-circle.png"
-            alt="ISEC Bengaluru Emblem"
-            class="banner-emblem-img"
-            loading="eager"
-            data-tip="ISEC Bengaluru — Institute for Social and Economic Change"
-          >
         </div>
       </div>
 
