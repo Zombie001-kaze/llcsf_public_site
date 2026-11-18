@@ -2550,7 +2550,24 @@
               Explore Profile →
             </a>
           </div>
-        </article>      </div>
+        </article>
+      </div>
+
+      <!-- Speakers Attendee Registration Callout -->
+      <div class="higgs-card reveal" style="margin-top:28px; padding:22px 28px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; border:1px solid var(--gold-400); background:linear-gradient(135deg, rgba(16,44,32,0.92), rgba(10,24,18,0.96)); border-radius:14px; box-shadow:0 8px 30px rgba(0,0,0,0.45);">
+        <div style="display:flex; align-items:center; gap:16px;">
+          <span style="font-size:2.2rem;">🎙️</span>
+          <div>
+            <strong style="color:#ffffff; font-size:1.1rem; display:block; font-family:'Playfair Display',serif;">Attend the Distinguished Speakers' Sessions</strong>
+            <span style="color:var(--text-platinum); font-size:0.88rem;">Join the audience for keynote scholar talks, cultural theories, and interdisciplinary dialogues.</span>
+          </div>
+        </div>
+        <div>
+          <a href="https://forms.gle/zMpT9S9ZzdBpwcwP6" target="_blank" rel="noopener" class="btn-nav" style="padding:11px 24px; font-size:0.86rem; text-decoration:none; box-shadow:0 4px 18px rgba(198,146,52,0.5);">
+            <span>Register as an Attendee – Speakers' Talks Only</span> ↗
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -2732,17 +2749,43 @@
               </div>
             </div>
 
-            <div style="display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
-              <a href="https://forms.gle/N14GcqGk45okExY97" target="_blank" rel="noopener" class="btn-nav" style="padding:12px 26px; font-size:0.92rem; text-decoration:none; box-shadow:0 6px 24px rgba(198,146,52,0.5);">
-                <span>Open Registration Form</span> ↗
-              </a>
-              <button type="button" id="copyRegLinkBtn" onclick="copyRegistrationLink()" class="btn-hero-secondary" style="padding:11px 20px; font-size:0.86rem; cursor:pointer; background:rgba(255,255,255,0.06); border:1px solid var(--gold-400); color:var(--gold-200); border-radius:999px;">
-                <span id="copyBtnText">📋 Copy Link</span>
-              </button>
-            </div>
+            <!-- Registration Tracks -->
+            <div style="display:flex; flex-direction:column; gap:14px; margin-top:8px;">
+              <!-- Track 1: Full Conference -->
+              <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(198,146,52,0.28); border-radius:12px; padding:16px 18px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                  <div>
+                    <strong style="color:#ffffff; font-size:0.98rem; display:block;">Full Conference Registration</strong>
+                    <span style="color:var(--text-platinum); font-size:0.84rem;">For paper presenters, publication consideration &amp; all-track delegates</span>
+                  </div>
+                  <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+                    <a href="https://forms.gle/N14GcqGk45okExY97" target="_blank" rel="noopener" class="btn-nav" style="padding:10px 22px; font-size:0.86rem; text-decoration:none; box-shadow:0 4px 18px rgba(198,146,52,0.4);">
+                      <span>Open Form</span> ↗
+                    </a>
+                    <button type="button" id="copyRegLinkBtn" onclick="copyRegistrationLink('https://forms.gle/N14GcqGk45okExY97')" class="btn-hero-secondary" style="padding:9px 16px; font-size:0.8rem; cursor:pointer; background:rgba(255,255,255,0.06); border:1px solid var(--gold-400); color:var(--gold-200); border-radius:999px;">
+                      <span id="copyBtnText">📋 Copy Link</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
 
-            <div style="margin-top:16px; font-size:0.82rem; color:#A8B5A2;">
-              Direct Link: <a href="https://forms.gle/N14GcqGk45okExY97" target="_blank" rel="noopener" style="color:var(--gold-300); text-decoration:underline; word-break:break-all;">https://forms.gle/N14GcqGk45okExY97</a>
+              <!-- Track 2: Attendee – Speakers' Talks Only -->
+              <div style="background:linear-gradient(135deg, rgba(16,44,32,0.9), rgba(10,24,18,0.95)); border:1px solid var(--gold-400); border-radius:12px; padding:16px 18px; box-shadow:0 4px 22px rgba(198,146,52,0.18);">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                  <div>
+                    <div style="display:inline-flex; align-items:center; gap:6px; background:rgba(198,146,52,0.2); padding:3px 10px; border-radius:999px; margin-bottom:6px;">
+                      <span style="font-size:0.75rem; color:var(--gold-300); font-weight:700; text-transform:uppercase; letter-spacing:0.08em; font-family:'Space Grotesk',sans-serif;">Attendee Access</span>
+                    </div>
+                    <strong style="color:#ffffff; font-size:1.02rem; display:block; font-family:'Playfair Display',serif;">Register as an Attendee – Speakers' Talks Only</strong>
+                    <span style="color:var(--text-platinum); font-size:0.84rem;">For participants attending exclusively the invited speakers' sessions</span>
+                  </div>
+                  <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+                    <a href="https://forms.gle/zMpT9S9ZzdBpwcwP6" target="_blank" rel="noopener" class="btn-hero-primary" style="padding:11px 24px; font-size:0.88rem; text-decoration:none; box-shadow:0 4px 20px rgba(198,146,52,0.6);">
+                      <span>Register as Attendee</span> ✍️
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -2887,7 +2930,10 @@
           </div>
           <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
             <a href="https://forms.gle/N14GcqGk45okExY97" target="_blank" rel="noopener" class="btn-nav" style="padding: 10px 22px; font-size: 0.86rem; text-decoration: none; white-space: nowrap; box-shadow: 0 4px 18px rgba(198,146,52,0.4);">
-              <span>Register Online &amp; Pay</span> ↗
+              <span>Full Registration &amp; Pay</span> ↗
+            </a>
+            <a href="https://forms.gle/zMpT9S9ZzdBpwcwP6" target="_blank" rel="noopener" class="btn-hero-secondary" style="padding: 9px 18px; font-size: 0.84rem; text-decoration: none; white-space: nowrap; border-radius: 999px; border-color: var(--gold-400); color: var(--gold-200);">
+              <span>Attendee – Speakers' Talks Only</span> ↗
             </a>
           </div>
         </div>
@@ -3208,7 +3254,8 @@
             <li><a href="#tracks">Academic Tracks</a></li>
             <li><a href="#awards">Awards &amp; Publications</a></li>
             <li><a href="#registration">Registration &amp; QR Code</a></li>
-            <li><a href="https://forms.gle/N14GcqGk45okExY97" target="_blank" rel="noopener" style="color:var(--gold-300);">Online Registration Form ↗</a></li>
+            <li><a href="https://forms.gle/N14GcqGk45okExY97" target="_blank" rel="noopener" style="color:var(--gold-300);">Full Registration Form ↗</a></li>
+            <li><a href="https://forms.gle/zMpT9S9ZzdBpwcwP6" target="_blank" rel="noopener" style="color:var(--gold-300);">Register as an Attendee (Speakers' Talks Only) ↗</a></li>
             <li><a href="#organizers">Host Institutions</a></li>
           </ul>
         </div>
@@ -3477,8 +3524,8 @@
     }, 80);
 
     /* ── 11. COPY REGISTRATION LINK TO CLIPBOARD ── */
-    function copyRegistrationLink() {
-      const url = "https://forms.gle/N14GcqGk45okExY97";
+    function copyRegistrationLink(customUrl) {
+      const url = customUrl || "https://forms.gle/N14GcqGk45okExY97";
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(() => {
           const btnText = document.getElementById("copyBtnText");
