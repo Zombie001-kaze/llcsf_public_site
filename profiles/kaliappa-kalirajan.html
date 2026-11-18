@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prof. Kaliappa Kalirajan — International &amp; Development Economics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0D1B2A; --navy-2:#1B2E4B; --gold:#C69234; --gold-2:#E0A96D;
+    --paper:#F7F4EC; --sand:#EFE8D8; --ink:#1C1917; --ink-soft:#5C5549;
+    --line:#DCD2BE; --card:#FFFDF9;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:border-box;}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){ --paper:#101722; --ink:#ECE6D8; --ink-soft:#B8B09E; --card:#172230; --line:#2A394C; --sand:#1E2B3C; }
+  }
+  :root[data-theme="dark"]{ --paper:#101722; --ink:#ECE6D8; --ink-soft:#B8B09E; --card:#172230; --line:#2A394C; --sand:#1E2B3C; }
+  html{scroll-padding-top:66px; scroll-behavior:smooth;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'Inter',system-ui,sans-serif; line-height:1.65;}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif; font-weight:600; margin:0 0 .3em; color:var(--ink);}
+  a{color:inherit;}
+  .wrap{max-width:860px; margin:0 auto; padding:0 24px;}
+  nav{position:sticky; top:0; z-index:10; background:var(--navy); color:#F3EAD9; padding:env(safe-area-inset-top,0px) 0 0;}
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; padding-top:12px; padding-bottom:12px; overflow-x:auto; gap:18px;}
+  nav .brand{font-family:'Fraunces',serif; font-size:1.05rem; white-space:nowrap;}
+  nav .links{display:flex; gap:18px; font-size:.84rem; white-space:nowrap;}
+  nav .links a{text-decoration:none; color:#E5D2BA; border-bottom:2px solid transparent; padding-bottom:2px;}
+  nav .links a:hover, nav .links a:focus-visible{color:#fff; border-color:var(--gold);}
+
+  header.hero{background:linear-gradient(180deg,var(--navy) 0%, var(--navy-2) 100%); color:#F5EAD9; padding:56px 0 64px;}
+  .hero .wrap{display:flex; gap:36px; align-items:center; flex-wrap:wrap;}
+  .hero img{width:150px; height:150px; border-radius:8px; object-fit:cover; border:3px solid var(--gold); flex-shrink:0; background:#fff;}
+  .hero .txt{flex:1; min-width:260px;}
+  .hero .eyebrow{color:var(--gold-2); font-size:.92rem; margin-bottom:6px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;}
+  .hero h1{font-size:2.2rem; color:#fff; margin-bottom:6px;}
+  .hero .role{font-size:1.02rem; color:#E0D3C1; margin-bottom:6px; line-height:1.4;}
+  .hero .role-sub{font-size:.9rem; color:var(--gold-2); margin-bottom:14px;}
+  .hero .contact{font-size:.86rem; color:#C8BCAB; display:flex; flex-wrap:wrap; gap:14px;}
+  .hero .contact a{text-decoration:none; border-bottom:1px solid #7D6B55;}
+  .hero .contact a:hover{color:#fff; border-color:#fff;}
+
+  section{padding:42px 0; border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  section h2{font-size:1.45rem; margin-bottom:16px;}
+  .lede{color:var(--ink-soft); max-width:68ch; font-size:1.01rem; line-height:1.7;}
+
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:8px;}
+  @media (max-width:640px){.grid2{grid-template-columns:1fr;}}
+
+  .entry{margin-bottom:16px;}
+  .entry .when{color:var(--gold); font-size:.82rem; font-weight:600;}
+  .entry .what{font-weight:600; margin-top:2px;}
+  .entry .where{color:var(--ink-soft); font-size:.92rem;}
+
+  .taglist{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;}
+  .tag{background:var(--card); border:1px solid var(--line); border-radius:4px; padding:6px 12px; font-size:.86rem;}
+
+  .pub{padding:14px 0; border-top:1px solid var(--line);}
+  .pub:first-child{border-top:none;}
+  .pub .yr{color:var(--gold); font-weight:600; font-size:.82rem;}
+  .pub .title{font-weight:600; margin:2px 0;}
+  .pub .venue{color:var(--ink-soft); font-size:.9rem; font-style:italic;}
+
+  .stats{display:flex; gap:32px; flex-wrap:wrap; margin-top:12px;}
+  .stat .num{font-family:'Fraunces',serif; font-size:2rem; color:var(--gold); line-height:1;}
+  .stat .label{color:var(--ink-soft); font-size:.84rem; margin-top:4px;}
+
+  .keynote-box{background:var(--card); border:1px solid var(--line); border-left:4px solid var(--gold); padding:18px 20px; border-radius:4px; margin-top:16px;}
+
+  footer{padding:34px 0 48px; color:var(--ink-soft); font-size:.86rem;}
+</style>
+<link rel="icon" type="image/png" href="../assets/images/favicon.png">
+<link rel="shortcut icon" href="../favicon.ico">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand" style="display:flex;align-items:center;gap:10px;">
+      <a href="../index.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit;" title="Return to LLCSS 2026 Home">
+        <img src="../assets/images/sfs-college-seal.png" alt="SFS College Crest" style="width:26px;height:26px;border-radius:50%;object-fit:cover;border:1px solid #D9A26B;background:#fff;padding:1px;">
+        <img src="../assets/images/logo-circle.png" alt="LLCSS Logo" style="width:26px;height:26px;border-radius:50%;object-fit:cover;border:1px solid #D9A26B;">
+        <img src="../assets/images/isec-logo-circle.png" alt="ISEC Logo" style="width:25px;height:25px;border-radius:50%;object-fit:cover;border:1px solid #8a6830;margin-left:-2px;">
+        <span style="font-size:0.86rem;color:#F3D8C7;font-weight:600;">← LLCSS 2026</span>
+      </a>
+      <span style="opacity:0.35;">|</span>
+      <span>Prof. Kaliappa Kalirajan</span>
+    </div>
+    <div class="links">
+      <a href="../index.html#profiles">Conference Speakers</a>
+      <a href="#about">About</a>
+      <a href="#career">Career</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+      <a href="https://forms.gle/zMpT9S9ZzdBpwcwP6" target="_blank" rel="noopener" style="color:var(--gold,#C69234);font-weight:600;">Register ↗</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <img src="../assets/images/speakers/kaliappa-kalirajan.webp" alt="Prof. Kaliappa Kalirajan" width="150" height="150">
+    <div class="txt">
+      <div class="eyebrow">Emeritus Professor</div>
+      <h1>Prof. Kaliappa Kalirajan</h1>
+      <div class="role">Crawford School of Public Policy, The Australian National University (ANU), Canberra</div>
+      <div class="role-sub">Honorary Professor · Institute for Social and Economic Change (ISEC), Bengaluru</div>
+      <div class="contact">
+        <a href="mailto:kaliappa.kalirajan@anu.edu.au">kaliappa.kalirajan@anu.edu.au</a>
+        <a href="https://researchportalplus.anu.edu.au/en/persons/kaliappa-kalirajan/" target="_blank" rel="noopener">ANU Research Portal ↗</a>
+        <a href="https://orcid.org/0000-0003-3427-3384" target="_blank" rel="noopener">ORCID 0000-0003-3427-3384</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p class="lede">
+      Prof. Kaliappa Kalirajan is an internationally distinguished applied economist, econometrician, and policy analyst. He serves as Emeritus Professor of International and Development Economics at the Crawford School of Public Policy, The Australian National University (ANU). An alumnus of Madurai University and ANU (PhD, 1979), he has held major academic and leadership roles including Deputy Executive Director of the Australia South Asia Research Centre (ASARC) at ANU and Professor of International Economics at FASID/GRIPS in Tokyo. He has also been deeply affiliated as an honorary scholar and academic collaborator with the Institute for Social and Economic Change (ISEC), Bengaluru.
+    </p>
+    <p class="lede" style="margin-top:14px;">
+      His seminal research has made landmark contributions to applied econometrics—particularly in the methodology and estimation of stochastic frontier production functions, technical efficiency measurement, and total factor productivity (TFP) growth. Over a career spanning more than four decades, his scholarship bridges theoretical econometric modelling with practical macroeconomic and development policy, addressing regional economic integration (including RCEP and ASEAN), trade reforms, poverty reduction, agricultural economics, green growth, and climate change mitigation frameworks across Asia.
+    </p>
+    <div class="stats">
+      <div class="stat"><div class="num">9,680+</div><div class="label">citations (Google Scholar)</div></div>
+      <div class="stat"><div class="num">46</div><div class="label">h-index</div></div>
+      <div class="stat"><div class="num">170+</div><div class="label">peer-reviewed articles</div></div>
+      <div class="stat"><div class="num">20+</div><div class="label">books &amp; monographs</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="career">
+  <div class="wrap">
+    <h2>Academic Trajectory</h2>
+    <div class="grid2">
+      <div>
+        <h3 style="font-size:1.05rem;">Positions</h3>
+        <div class="entry"><div class="when">Current</div><div class="what">Emeritus Professor</div><div class="where">Crawford School of Public Policy, The Australian National University (ANU)</div></div>
+        <div class="entry"><div class="when">2000 — 2019</div><div class="what">Professor of International and Development Economics</div><div class="where">Crawford School of Public Policy, ANU</div></div>
+        <div class="entry"><div class="when">1997 — 2000</div><div class="what">Professor of International Economics</div><div class="where">Foundation for Advanced Studies on International Development (FASID) &amp; GRIPS, Tokyo</div></div>
+        <div class="entry"><div class="when">1994 — 2000</div><div class="what">Deputy Executive Director</div><div class="where">Australia South Asia Research Centre (ASARC), ANU</div></div>
+        <div class="entry"><div class="when">1988 — 1994</div><div class="what">Senior Research Fellow &amp; Fellow</div><div class="where">Research School of Pacific and Asian Studies (RSPAS), ANU</div></div>
+        <div class="entry"><div class="when">1981 — 1987</div><div class="what">Lecturer &amp; Senior Lecturer in Economics</div><div class="where">National University of Singapore (NUS)</div></div>
+      </div>
+      <div>
+        <h3 style="font-size:1.05rem;">Education</h3>
+        <div class="entry"><div class="when">1979</div><div class="what">PhD in Economics</div><div class="where">The Australian National University, Canberra</div></div>
+        <div class="entry"><div class="when">1973</div><div class="what">M.Litt. in Econometrics</div><div class="where">Madurai University, India</div></div>
+        <div class="entry"><div class="when">1970</div><div class="what">M.Sc. in Mathematical Economics (First Class)</div><div class="where">Madurai University, India</div></div>
+        
+        <h3 style="font-size:1.05rem; margin-top:24px;">Global Policy Engagements</h3>
+        <div class="entry"><div class="when">Ongoing</div><div class="what">Honorary Professor &amp; Senior Fellow</div><div class="where">Institute for Social and Economic Change (ISEC), Bengaluru</div></div>
+        <div class="entry"><div class="when">Consultancies</div><div class="what">Policy Advisor on Regional Integration &amp; Green Growth</div><div class="where">Asian Development Bank (ADB), World Bank, UNESCAP</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <h2>Research Focus &amp; Domains</h2>
+    <p class="lede">Interdisciplinary scholarship at the nexus of applied econometrics, international trade, and sustainable development.</p>
+    <div class="taglist">
+      <div class="tag">Stochastic Frontier Production Functions</div>
+      <div class="tag">Technical Efficiency &amp; TFP Decomposition</div>
+      <div class="tag">Macroeconomic &amp; Trade Policy Reforms</div>
+      <div class="tag">Regional Economic Integration &amp; RCEP</div>
+      <div class="tag">Green Growth &amp; Low-Carbon Economies in Asia</div>
+      <div class="tag">Agricultural Economics &amp; Poverty Alleviation</div>
+      <div class="tag">Climate Change Mitigation Frameworks</div>
+      <div class="tag">Behind-the-Border Trade Barriers</div>
+    </div>
+
+    <div class="keynote-box">
+      <h3 style="font-size:1.05rem; margin-bottom:8px; color:var(--ink);">Keynote Address &amp; Interdisciplinary Dialogues</h3>
+      <p style="font-size:.94rem; color:var(--ink-soft); line-height:1.6; margin:0;">
+        At LLCSS 2026, Prof. Kalirajan contributes authoritative insights connecting economic modelling, regional cooperation, and sustainable futures—examining how quantitative econometric frameworks inform public policy, green energy transitions, and inclusive development across South and East Asia.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <h2>Selected Publications &amp; Books</h2>
+    <div class="pub"><div class="yr">2024</div><div class="title">Trade in Environmental Goods and Sustainable Energy Policy in the Asia-Pacific Region</div><div class="venue">Asia-Pacific Economic Literature</div></div>
+    <div class="pub"><div class="yr">2021</div><div class="title">Indian Economy's Path to Low-Carbon Growth: Macroeconomic and Structural Dimensions</div><div class="venue">Journal of Quantitative Economics</div></div>
+    <div class="pub"><div class="yr">2014</div><div class="title">Trade and Investment in Asia-Pacific: Behind-the-Border Barriers</div><div class="venue">Monograph · Springer Publishing</div></div>
+    <div class="pub"><div class="yr">2011</div><div class="title">Regional Cooperation for Clean and Renewable Energy in Asia</div><div class="venue">Energy Policy, 39(11)</div></div>
+    <div class="pub"><div class="yr">2008</div><div class="title">Accelerating Growth and Poverty Reduction: A Policy Framework for India's Development</div><div class="venue">Book · Academic Foundation — with Suresh Tendulkar</div></div>
+    <div class="pub"><div class="yr">2001</div><div class="title">Economic Reforms in India: A New Approach</div><div class="venue">Monograph · Edward Elgar Publishing — with Ric Shand</div></div>
+    <div class="pub"><div class="yr">1999</div><div class="title">Stochastic Frontier Production Functions and Technical Efficiency Measures</div><div class="venue">Journal of Economic Surveys, 13(2)</div></div>
+    <div class="pub"><div class="yr">1985</div><div class="title">On Measuring Extreme Values of Frontier Production Functions</div><div class="venue">Journal of Applied Econometrics</div></div>
+    <div class="pub"><div class="yr">1981</div><div class="title">An Econometric Analysis of Production Risk Using Frontier Production Function</div><div class="venue">American Journal of Agricultural Economics, 63(3)</div></div>
+    <p style="margin-top:16px; color:var(--ink-soft); font-size:.9rem;">Author or editor of 20 books and over 170 papers in leading international journals of economics, econometrics, and policy.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Get in Touch</h2>
+    <p class="lede">Crawford School of Public Policy, JG Crawford Building, The Australian National University, Acton ACT 2601, Australia</p>
+    <div class="contact" style="margin-top:14px; display:flex; gap:20px; flex-wrap:wrap; font-size:.94rem;">
+      <a href="mailto:kaliappa.kalirajan@anu.edu.au" style="border-bottom:1px solid var(--line);">✉️ kaliappa.kalirajan@anu.edu.au</a>
+      <a href="https://researchportalplus.anu.edu.au/en/persons/kaliappa-kalirajan/" target="_blank" rel="noopener" style="border-bottom:1px solid var(--line);">🏛️ ANU Researcher Profile ↗</a>
+      <a href="https://orcid.org/0000-0003-3427-3384" target="_blank" rel="noopener" style="border-bottom:1px solid var(--line);">🆔 ORCID: 0000-0003-3427-3384</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Prof. Kaliappa Kalirajan · Crawford School of Public Policy, The Australian National University (ANU) · In Collaboration with ISEC Bengaluru
+  </div>
+</footer>
+
+</body>
+</html>
